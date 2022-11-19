@@ -29,3 +29,11 @@ jobs:
         run: |
           pip install cmem-cmemc
           cmemc --version
+      - name: use cmemc
+        run: |
+          cmemc graph list
+        env: # Or as an environment variable
+          CMEM_BASE_URI: ${{ secrets.MY_CMEM_BASE_URI }}
+          OAUTH_GRANT_TYPE: ${{ secrets.MY_OAUTH_GRANT_TYPE }}
+          OAUTH_CLIENT_ID: ${{ secrets.MY_OAUTH_CLIENT_ID }}
+          OAUTH_CLIENT_SECRET: ${{ secrets.MY_OAUTH_CLIENT_SECRET }}
