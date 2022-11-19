@@ -1,2 +1,3 @@
 # cmemc-action
-test repository for cmemc based github workflow
+
+test project for cmemc based github action workflow
