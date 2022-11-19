@@ -1,23 +1,17 @@
-# This is a basic workflow to help you get started with Actions
-
+---
 name: cmemc
 
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
     steps:
@@ -31,9 +25,13 @@ jobs:
           cmemc --version
       - name: use cmemc
         run: |
-          cmemc graph list
-        env: # Or as an environment variable
+          cmemc graph graph.ttl $GRAPH
+          cmemc graph count $GRAPH
+          cmemc graph delete $GRAPH
+        env:
+          GRAPH: "https://github.com/seebi/cmemc-workflow"
           CMEM_BASE_URI: ${{ secrets.MY_CMEM_BASE_URI }}
           OAUTH_GRANT_TYPE: ${{ secrets.MY_OAUTH_GRANT_TYPE }}
           OAUTH_CLIENT_ID: ${{ secrets.MY_OAUTH_CLIENT_ID }}
           OAUTH_CLIENT_SECRET: ${{ secrets.MY_OAUTH_CLIENT_SECRET }}
+
