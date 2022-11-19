@@ -25,7 +25,7 @@ jobs:
           cmemc --version
       - name: use cmemc
         run: |
-          cmemc graph graph.ttl $GRAPH
+          cmemc graph import graph.ttl $GRAPH
           cmemc graph count $GRAPH
           cmemc graph delete $GRAPH
         env:
