@@ -1,3 +1,4 @@
 # cmemc-workflow
 
-test project for cmemc based github action workflow
+Test project for cmemc based github action workflows and gitlab pipelines.
+
