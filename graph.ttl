@@ -3,10 +3,10 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix : <http://usefulinc.com/ns/doap#> .
 
-<https://github.com/seebi/cmemc-workflow#id>
+<https://github.com/eccenca/cmemc-workflow#id>
     :created "2022-11-19" ;
     :description "test project for cmemc based github action workflow"@en ;
-    :homepage <https://github.com/seebi/cmemc-workflow> ;
+    :homepage <https://github.com/eccenca/cmemc-workflow> ;
     :license <http://spdx.org/licenses/Apache-2.0> ;
     :maintainer [
         a foaf:Person ;
@@ -15,8 +15,8 @@
     ];
     :name "cmemc-workflow" ;
     :repository [
-        :browse <https://github.com/seebi/cmemc-workflow> ;
-        :location <https://github.com/seebi/cmemc-workflow.git> ;
+        :browse <https://github.com/eccenca/cmemc-workflow> ;
+        :location <https://github.com/eccenca/cmemc-workflow.git> ;
         a :GitRepository
     ] ;
     a :Project .
