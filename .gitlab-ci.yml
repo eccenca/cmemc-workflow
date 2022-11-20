@@ -6,4 +6,4 @@ test:
     image: docker-registry.eccenca.com/eccenca-cmemc:latest
     stage: test
     script:
-        - --version
+        - ls
