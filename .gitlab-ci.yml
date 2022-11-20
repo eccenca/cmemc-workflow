@@ -3,7 +3,9 @@ stages:
   - test
 
 test:
-    image: docker-registry.eccenca.com/eccenca-cmemc:latest
+    image:
+      name: docker-registry.eccenca.com/eccenca-cmemc:latest
+      entrypoint: [""]
     stage: test
     script:
-        - ls
+        - cmemc --version
