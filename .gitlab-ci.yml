@@ -9,3 +9,12 @@ test:
     stage: test
     script:
         - cmemc --version
+        - cmemc graph import graph.ttl $GRAPH
+        - cmemc graph count $GRAPH
+        - cmemc graph delete $GRAPH
+    variables:
+      GRAPH: "https://github.com/seebi/cmemc-workflow"
+      CMEM_BASE_URI: $MY_CMEM_BASE_URI
+      OAUTH_GRANT_TYPE: $MY_OAUTH_GRANT_TYPE
+      OAUTH_CLIENT_ID: $MY_OAUTH_CLIENT_ID
+      AUTH_CLIENT_SECRET: $MY_OAUTH_CLIENT_SECRET
